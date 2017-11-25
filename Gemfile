@@ -24,6 +24,9 @@ gem 'oauth2'
 gem 'friendly_id', '~> 5.1.0'
 gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
+gem 'slim-rails'
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 group :development, :test do
   gem 'byebug', platform: :mri
