@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+integrations = [
+  { name: 'Slack', description: 'Slack is where work flows. Its where the people you need, the information you share, and the tools you use come together to get things done', image_url: 'http://www.emergingedtech.com/wp/wp-content/uploads/2016/11/Slack-CMYK.png', kind: :oauth2 },
+  { name: 'Github', description: 'GitHub is a development platform inspired by the way you work', image_url: 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png', kind: :oauth2 },
+  { name: 'SQL', description: 'Custom query to create reports', image_url: 'https://azure.microsoft.com/svghandler/sql-database/?width=300&height=157', kind: :sql },
+  { name: 'UptimeRobot', description: 'Everyone with a website knows that, things can sometimes go wrong. Sometimes it is with the code, the server or the network. Uptime Robot is all about helping you to keep your websites up.', image_url: 'https://uptimerobot.com/assets/img/logo_plain.png', kind: :jwt }
+]
+
+integrations.each {|integration| Integration.find_by_name_or_create(integration) }
