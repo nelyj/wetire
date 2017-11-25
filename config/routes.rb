@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :queries
   get 'home/index'
 
   devise_for :accounts
