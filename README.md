@@ -1,24 +1,11 @@
-# README
+## Wetire (Weekly TI Report or WE TIRE)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Open Source automation platform to weekly TI Reports (github tasks, SQL Queries, Slack messages with 'bugs found' and server uptime, etc)
 
-Things you may want to cover:
+### Motivation:
 
-* Ruby version
+I'm a freelance, consultant and team leader for some teams. In the last time, once a week, I need to write a reports for managers (CIO, CEO, etc). With specific queries, done task, server uptime and team achievements in some cases. Normally this persons for any reason prefer to use "Spreadsheets" to read this data. For this reason I'm going to automate this task.
 
-* System dependencies
+### Contributions
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please feel free to propose ideas, PRs, etc.
