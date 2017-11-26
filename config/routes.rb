@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
-
-  get 'bounds/index'
-
-  get 'bounds/show'
-
-  get 'bounds/new'
-
-  get 'bounds/edit'
-
   root 'home#index'
 
   devise_for :accounts
   resources :dashboards, only: [:index]
   resources :queries
+  resources :bounds, only: [:index]
+  resources :integrations, only: [:index, :show] do
+    resources :bounds, only: [:new, :show]
+  end
 end
