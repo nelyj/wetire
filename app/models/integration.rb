@@ -1,3 +1,3 @@
 class Integration < ApplicationRecord
-  enum: %i(oauth2 sql jwt)
+  enum kind: %i(oauth2 sql jwt)
 end

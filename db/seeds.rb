@@ -5,4 +5,9 @@ integrations = [
   { name: 'UptimeRobot', description: 'Everyone with a website knows that, things can sometimes go wrong. Sometimes it is with the code, the server or the network. Uptime Robot is all about helping you to keep your websites up.', image_url: 'https://uptimerobot.com/assets/img/logo_plain.png', kind: :jwt }
 ]
 
-integrations.each {|integration| Integration.find_by_name_or_create(integration) }
+integrations.each do |hash|
+  Integration.find_or_create_by(name: hash[:name]) do |integration|
+    binding.pry
+    integration = hash
+  end
+end
