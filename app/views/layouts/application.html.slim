@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | Wetire - Open Source platform to weekly TI reports automation
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    = render 'layouts/navbar'
+    p.notice
+      = notice
+    p.alert
+      = alert
+    = yield

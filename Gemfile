@@ -26,7 +26,8 @@ gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
 gem 'slim-rails'
 gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'popper_js', '~> 1.12.3'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
