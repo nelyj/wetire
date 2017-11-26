@@ -1,5 +1,7 @@
 class BoundsController < ApplicationController
   def index
+    @bounds = current_account.bounds
+    @integrations = Integration.all
   end
 
   def show

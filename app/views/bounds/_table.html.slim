@@ -1,0 +1,15 @@
+h3 Bounds
+table.table.table-striped
+  thead
+    tr
+      th Created at
+      th Integration
+      th Setting type
+      th
+  tbody
+    - if @bounds.count > 0
+    -else
+      .jumbotron.text-center
+        h1.display-5
+          | You don't have bounds connections
+        p.lead You must need to active integrations below
