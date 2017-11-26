@@ -1,2 +1,6 @@
-h1 Dashboards#index
-p Find me in app/views/dashboards/index.html.slim
+-unless @bounds.count > 3
+  .jumbotron.text-center
+    h1.display-5
+      | You don't have enough bounds connections
+    p.lead You must need unless 3 active bounds conecctions
+    =link_to "Create bounds", bounds_path, class: "btn btn-lg btn-success"
