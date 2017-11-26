@@ -1,2 +1,21 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+.jumbotron.text-center
+  h1.display-4
+    | Weekly TI reports automation
+  p.lead Open Source platform to weekly TI Reports for github tasks, SQL Queries, Slack messages with 'bugs found' and server uptime.
+  =link_to "Sign Up for free", new_account_registration_path, class: "btn btn-lg btn-success"
+.row
+  .col-lg-6
+    h3 SQL custom queries
+    p Copy and paste your custom queries for reports
+  .col-lg-6
+    h3 Slack integration
+    p Track bugs found by your teammates
+  .col-lg-6
+    h3 Github integration
+    p Track your team tasks (Ice Box,Do, Done)
+  .col-lg-6
+    h3 Uptime Robot integration
+    p Track your down server
+  .col-lg-6
+    h3 Generate spreadsheet reports
+    p Generate spreadsheet for your managers, CEO, CIO
