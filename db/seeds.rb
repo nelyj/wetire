@@ -7,7 +7,6 @@ integrations = [
 
 integrations.each do |hash|
   Integration.find_or_create_by(name: hash[:name]) do |integration|
-    binding.pry
     integration = hash
   end
 end

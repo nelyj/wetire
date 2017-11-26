@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125224729) do
+ActiveRecord::Schema.define(version: 20171126003011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 20171125224729) do
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "bounds", force: :cascade do |t|
+    t.integer  "account_id"
+    t.integer  "integration_id"
+    t.jsonb    "setting"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["account_id"], name: "index_bounds_on_account_id", using: :btree
+    t.index ["integration_id"], name: "index_bounds_on_integration_id", using: :btree
+  end
+
   create_table "integrations", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -52,5 +62,7 @@ ActiveRecord::Schema.define(version: 20171125224729) do
     t.index ["account_id"], name: "index_queries_on_account_id", using: :btree
   end
 
+  add_foreign_key "bounds", "accounts"
+  add_foreign_key "bounds", "integrations"
   add_foreign_key "queries", "accounts"
 end

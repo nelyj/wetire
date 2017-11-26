@@ -5,4 +5,6 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :queries
+  has_many :bounds
+  has_many :integrations, through: :bounds
 end
