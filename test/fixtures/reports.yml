@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  from: 2017-11-25 23:15:15
+  to: 2017-11-25 23:15:15
+  description: MyText
+  notification: MyText
+  account: one
+
+two:
+  title: MyString
+  from: 2017-11-25 23:15:15
+  to: 2017-11-25 23:15:15
+  description: MyText
+  notification: MyText
+  account: two
