@@ -2,5 +2,5 @@ h3 Integrations
 .row
   - @integrations.each do |integration|
     .col-md-3
-      h4= integration.name
-      =image_tag integration.image_url
+      =link_to integration_path(integration) do
+        =image_tag integration.image_url, width: 120
