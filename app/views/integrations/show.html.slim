@@ -1,2 +1,16 @@
-h1 Integrations#show
-p Find me in app/views/integrations/show.html.slim
+.row
+  .col-md-8
+    .row
+      .col-md-6
+        =image_tag(@integration.image_url, width: 300)
+      .col-md-6
+        p
+          h1=@integration.name
+        b
+          | Connection: #{@integration.kind.capitalize}
+      .col-md-12
+        h3 Description
+        p=@integration.description
+
+  .col-md-4
+    =link_to "Activate", "", class: "btn btn-success btn-block"
