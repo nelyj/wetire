@@ -3,5 +3,6 @@ class IntegrationsController < ApplicationController
   end
 
   def show
+    @integration = Integration.friendly.find(params[:id])
   end
 end

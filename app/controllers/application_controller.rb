@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_account!
 
+  def normalize_friendly_id(value)
+    value.to_s.parameterize(preserve_case: true)
+  end
+  
   protected
   def after_sign_in_path_for(resource)
     sign_in_url = new_account_session_url
